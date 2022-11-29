@@ -68,9 +68,10 @@ dependencies {
     // Jetpack Compose Integration
     implementation "androidx.navigation:navigation-compose:$nav_version"
 
-    // ViewModel
-    def viewmodel_version = "2.5.1"
-    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$viewmodel_version"
+    // ViewModel & Live Data
+    def lifecycle_version = "2.5.1"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
 
     // Activity
     def activity_version = "1.6.1"
