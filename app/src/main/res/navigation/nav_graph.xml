@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.mobileapp.deafassist.SettingsFragment"
+        android:label="Settings" />
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.mobileapp.deafassist.HomeFragment"
+        android:label="Home" />
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.mobileapp.deafassist.AboutFragment"
+        android:label="fragment_about"
+        tools:layout="About" />
+</navigation>
