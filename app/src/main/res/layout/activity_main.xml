@@ -5,7 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="#F2E0FC">
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragmentContainerView"
@@ -17,7 +18,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:navGraph="@navigation/nav_graph" />
+        app:navGraph="@navigation/nav_graph"
+        style="@style/Theme.DeafAssist" />
 
     <com.google.android.material.bottomappbar.BottomAppBar
         android:id="@+id/bottomAppBar"
@@ -26,7 +28,8 @@
         app:fabCradleMargin="20dp"
         app:fabCradleVerticalOffset="5dp"
         app:fabCradleRoundedCornerRadius="20dp"
-        android:layout_gravity="bottom">
+        android:layout_gravity="bottom"
+        style="@style/BottomAppBarTheme">
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bottomNavigationView"
@@ -34,7 +37,9 @@
             android:layout_height="match_parent"
             android:layout_marginEnd="16dp"
             android:background="@android:color/transparent"
-            app:menu="@menu/bottom_nav_menu" />
+            app:menu="@menu/bottom_nav_menu"
+            app:itemIconTint="@color/black"
+            app:labelVisibilityMode="unlabeled" />
 
     </com.google.android.material.bottomappbar.BottomAppBar>
 
@@ -43,6 +48,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_list"
-        app:layout_anchor="@id/bottomAppBar"/>
+        app:layout_anchor="@id/bottomAppBar"
+        android:contentDescription="TODO"
+        app:backgroundTint="@color/floating_btn_color" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
