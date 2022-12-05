@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/voiceToText"
+        android:title="@string/mic_icon_title"
+        android:icon="@drawable/ic_mic" />
+
+    <item android:id="@+id/textToVoice"
+        android:title="@string/volumeUp_icon_title"
+        android:icon="@drawable/ic_volume_up" />
+
+    <item android:id="@+id/placeholder"
+        android:title="" />
+
+    <item android:id="@+id/settingsFragment"
+        android:title="@string/palette_icon_title"
+        android:icon="@drawable/ic_palette" />
+
+    <item android:id="@+id/aboutFragment"
+        android:title="@string/info_icon_title"
+        android:icon="@drawable/ic_info" />
+
+</menu>
