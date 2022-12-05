@@ -9,4 +9,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="navbar_purple">#B29ED3</color>
     <color name="floating_btn_color">#E0A8FB</color>
+    <color name="purple_background">#F2E0FC</color>
 </resources>

@@ -14,20 +14,14 @@
         <item name="android:windowFullscreen">true</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/purple_background</item>
+        <item name="android:textColor">@color/black</item>
         <!-- Customize your theme here. -->
 <!--        <item name="android:itemBackground">@color/navbar_purple</item>-->
     </style>
 
     <style name="BottomAppBarTheme" parent="Widget.MaterialComponents.BottomAppBar.Colored">
-        <item name="colorOnPrimary">@color/navbar_purple</item>
-        <item name="colorPrimary">@color/navbar_purple</item>
         <item name="backgroundTint">@color/navbar_purple</item>
-        <item name="iconTint">@color/black</item>
-        <item name="colorTertiary">@color/black</item>
         <item name="android:itemBackground">@color/black</item>
-        <!--<item name="android:itemBackground">@color/black</item>-->
-        <!--<item name="colorPrimary">@color/navbar_purple</item>-->
-        <!--<item name="colorPrimaryDark">@color/primaryDarkColor</item>-->
-        <!--<item name="colorAccent">@color/secondaryColor</item>-->
     </style>
 </resources>
