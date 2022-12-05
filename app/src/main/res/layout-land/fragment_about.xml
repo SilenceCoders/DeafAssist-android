@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#000000"
     tools:context=".AboutFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -13,33 +12,55 @@
 
         <TextView
             android:id="@+id/aboutTextView"
-            android:layout_width="426dp"
-            android:layout_height="295dp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="32dp"
             android:padding="20dp"
-            android:paddingStart="20dp"
-            android:paddingLeft="20dp"
-            android:paddingTop="20dp"
-            android:paddingEnd="20dp"
-            android:paddingRight="20dp"
-            android:paddingBottom="20dp"
             android:text="@string/about_text"
-            android:textColor="#FF0000"
+            android:textColor="@color/purple_500"
+            android:textColorLink="@color/purple_200"
             android:textSize="20sp"
             app:emojiCompatEnabled="true"
             app:fontFamily="sans-serif-black"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.553" />
+            app:layout_constraintStart_toEndOf="@+id/icon_imageView"
+            app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="241dp"
-            android:layout_height="306dp"
-            android:src="@drawable/death_assist_icon"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/aboutTextView"
+        <Space
+            android:id="@+id/space"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/icon_imageView"
+            app:layout_constraintEnd_toEndOf="@+id/icon_imageView"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/icon_imageView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="32dp"
+            android:contentDescription="@string/icon_contentDescription"
+            android:scaleType="fitStart"
+            android:src="@drawable/deafassist_icon"
+            app:layout_constraintBottom_toTopOf="@+id/space2"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/space" />
+
+        <Space
+            android:id="@+id/space2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/icon_imageView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/icon_imageView" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>
