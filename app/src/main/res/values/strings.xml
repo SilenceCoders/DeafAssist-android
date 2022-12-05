@@ -20,4 +20,11 @@
     <string name="about_text">DeafAssist is an app created by Sepehr Madani, Raul Olivares, and Jose Ramos as an accessibility tool for the hard of hearing.</string>
     <string name="navigation_settings_label">Settings</string>
     <string name="navigation_about_label">About</string>
+
+    <!-- Icons Title -->
+    <string name="mic_icon_title">Mic</string>
+    <string name="volumeUp_icon_title">Volume Up</string>
+    <string name="palette_icon_title">Palette</string>
+    <string name="info_icon_title">Info</string>
+
 </resources>
