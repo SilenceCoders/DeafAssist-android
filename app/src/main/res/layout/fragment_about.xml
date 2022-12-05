@@ -10,6 +10,39 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <Space
+            android:id="@+id/space_left"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/icon_imageView"
+            app:layout_constraintEnd_toStartOf="@+id/icon_imageView"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/icon_imageView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="32dp"
+            android:contentDescription="@string/icon_contentDescription"
+            android:scaleType="fitStart"
+            android:src="@drawable/deafassist_icon"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toStartOf="@+id/space_right"
+            app:layout_constraintStart_toEndOf="@+id/space_left"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Space
+            android:id="@+id/space_right"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/icon_imageView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/icon_imageView"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <TextView
             android:id="@+id/aboutTextView"
             android:layout_width="0dp"
@@ -19,10 +52,14 @@
             android:layout_marginEnd="32dp"
             android:layout_marginBottom="32dp"
             android:text="@string/about_text"
+            android:textColor="@color/purple_500"
+            android:textColorLink="@color/purple_200"
             android:textSize="20sp"
+            app:emojiCompatEnabled="true"
+            app:fontFamily="sans-serif-black"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/icon_imageView" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>
