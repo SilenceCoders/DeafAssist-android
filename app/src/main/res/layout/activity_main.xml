@@ -27,7 +27,7 @@
         android:layout_height="match_parent">
 
         <com.google.android.material.bottomappbar.BottomAppBar
-            android:id="@+id/bottom_nav"
+            android:id="@+id/bottomAppBar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:fabCradleMargin="13dp"
@@ -53,7 +53,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_list"
-            app:layout_anchor="@id/bottom_nav"
+            app:layout_anchor="@id/bottomAppBar"
             android:contentDescription="TODO"
             app:backgroundTint="@color/floating_btn_color" />
 
