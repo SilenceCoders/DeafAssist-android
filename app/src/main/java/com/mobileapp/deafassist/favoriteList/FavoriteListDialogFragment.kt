@@ -1,15 +1,18 @@
-package com.mobileapp.deafassist
+package com.mobileapp.deafassist.favoriteList
 
 import android.os.Bundle
-import com.google.android.material.bottomsheet.BottomSheetDialogFragment
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import com.mobileapp.deafassist.databinding.FragmentItemListDialogListDialogItemBinding
+import androidx.recyclerview.widget.DividerItemDecoration
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.mobileapp.deafassist.databinding.FragmentItemListDialogListDialogBinding
+import com.mobileapp.deafassist.databinding.FragmentItemListDialogListDialogItemBinding
+import com.mobileapp.deafassist.favoriteList.FavoriteViewModel
+
 
 // TODO: Customize parameter argument names
 const val ARG_ITEM_COUNT = "item_count"
@@ -35,6 +38,12 @@ class FavoriteListDialogFragment : BottomSheetDialogFragment() {
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentItemListDialogListDialogBinding.inflate(inflater, container, false)
+        binding.list.addItemDecoration(
+            DividerItemDecoration(
+                context,
+                DividerItemDecoration.VERTICAL
+            )
+        )
         return binding.root
     }
 
