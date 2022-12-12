@@ -23,6 +23,7 @@ class MainActivity : AppCompatActivity() {
         val navHostFragment =
             supportFragmentManager.findFragmentById(R.id.fragmentContainerView) as NavHostFragment
         val navController = navHostFragment.navController
+        binding.fab.setOnClickListener { navController.navigate(R.id.favoriteListDialogFragment) }
         binding.bottomNavigationView.setupWithNavController(navController)
     }
 }

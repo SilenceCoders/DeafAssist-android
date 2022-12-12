@@ -18,4 +18,9 @@
         android:name="com.mobileapp.deafassist.AboutFragment"
         android:label="fragment_about"
         tools:layout="About" />
+    <dialog
+        android:id="@+id/favoriteListDialogFragment"
+        android:name="com.mobileapp.deafassist.favoriteList.FavoriteListDialogFragment"
+        android:label="fragment_item_list_dialog_list_dialog"
+        tools:layout="@layout/fragment_item_list_dialog_list_dialog" />
 </navigation>

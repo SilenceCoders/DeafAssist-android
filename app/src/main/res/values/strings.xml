@@ -27,5 +27,7 @@
     <string name="palette_icon_title">Palette</string>
     <string name="info_icon_title">Info</string>
     <string name="icon_contentDescription">App Icon</string>
+    <string name="favorited_items_header">Favorited Items</string>
+    <string name="edit_button_contentdescription">Edit Button</string>
 
 </resources>
