@@ -6,16 +6,16 @@
     <string name="messages_header">Messages</string>
     <string name="sync_header">Sync</string>
 
-    <!-- Messages Preferences -->
-    <string name="signature_title">Your signature</string>
-    <string name="reply_title">Default reply action</string>
+    <!-- Name & language Preferences -->
+    <string name="signature_title">Your name</string>
+    <string name="reply_title">Default language option</string>
 
     <!-- Sync Preferences -->
-    <string name="sync_title">Sync email periodically</string>
-    <string name="attachment_title">Download incoming attachments</string>
-    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    <string name="sync_title">Sync language database periodically</string>
+    <string name="attachment_title">Send conversations to be analyzed</string>
+    <string name="attachment_summary_on">Sending Conversations to be analyzed
     </string>
-    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="attachment_summary_off">No data will be send til turned on</string>
     <string name="editTextInput_hint">Enter your text</string>
     <string name="about_text">DeafAssist is an app created by Sepehr Madani, Raul Olivares, and Jose Ramos as an accessibility tool for the hard of hearing.\n\n\n The source code for this app is published on <a href="https://github.com/SilenceCoders/DeafAssist-android">Github under Mozilla Public License 2.0.</a></string>
     <string name="navigation_settings_label">Settings</string>
