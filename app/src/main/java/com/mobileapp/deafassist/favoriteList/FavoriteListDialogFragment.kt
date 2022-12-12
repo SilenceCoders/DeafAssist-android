@@ -51,9 +51,10 @@ class FavoriteListDialogFragment : BottomSheetDialogFragment() {
         binding.list.layoutManager = LinearLayoutManager(context)
         binding.list.adapter = FavoriteAdapter(
             listOf(
-                FavoriteViewModel("Sepehr"),
-                FavoriteViewModel("Smart"),
-                FavoriteViewModel("Student")
+                FavoriteViewModel("What would you like to order?"),
+                FavoriteViewModel("Do you have any dietary allergies?"),
+                FavoriteViewModel("Thank you so much!"),
+                FavoriteViewModel("It was great speaking with you!")
             )
         )
     }
