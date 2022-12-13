@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
+import com.google.android.material.snackbar.Snackbar
 import com.mobileapp.deafassist.data.FavoriteEntity
 import com.mobileapp.deafassist.data.FavoritesApplication
 import com.mobileapp.deafassist.databinding.FragmentItemListDialogListDialogBinding
@@ -53,6 +54,10 @@ class FavoriteListDialogFragment : BottomSheetDialogFragment() {
             )
         )
 
+        // Connects our ViewModel with the database to receive the Flow of data. However, it does
+        // not do anything with them (yet), since we will use them in the RecyclerView.
+        favoriteViewModel.allFavorites.observe(this, Observer<List<FavoriteEntity>> {})
+
         return binding.root
     }
 
@@ -86,14 +91,7 @@ class FavoriteListDialogFragment : BottomSheetDialogFragment() {
 
         // binds the list items to a view
         override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-            holder.text.text = favoriteViewModel.allFavorites.value?.get(position)?.text
-
-            // TODO: Figure out what to do with allFavorites.
-            // allFavorites is coming in as a LiveData<List<FavoriteEntity>>
-//            favoriteViewModel.allFavorites.observe(this, Observer { favorites ->
-//                // Update the cached copy of the words in the adapter.
-//                favorites.let { binding.list.adapter.submitList(it) }
-//            })
+            holder.text.text = favoriteViewModel.allFavorites.value!![position].text
         }
 
         override fun getItemCount(): Int {
