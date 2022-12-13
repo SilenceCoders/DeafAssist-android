@@ -22,7 +22,10 @@ class MainActivity : AppCompatActivity() {
         val navHostFragment =
             supportFragmentManager.findFragmentById(R.id.fragmentContainerView) as NavHostFragment
         val navController = navHostFragment.navController
-        binding.fab.setOnClickListener { navController.navigate(R.id.favoriteListDialogFragment) }
+        binding.fab.setOnClickListener {
+            navController.navigate(R.id.homeFragment) // Take user back to home (if away)
+            navController.navigate(R.id.favoriteListDialogFragment) // Display the Favorites List
+        }
         binding.bottomNavigationView.setupWithNavController(navController)
     }
 }

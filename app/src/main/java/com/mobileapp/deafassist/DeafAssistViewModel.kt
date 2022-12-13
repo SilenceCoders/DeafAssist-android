@@ -9,6 +9,7 @@ class DeafAssistViewModel : ViewModel() {
         MutableLiveData<String>()
     }
 
+    fun update(newText: String) { currentText.value = newText}
     // Rest of the ViewModel...
 
 }

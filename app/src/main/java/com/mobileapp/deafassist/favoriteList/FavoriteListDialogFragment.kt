@@ -1,9 +1,11 @@
 package com.mobileapp.deafassist.favoriteList
 
+import android.content.DialogInterface
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.TextView
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.LiveData
@@ -12,7 +14,7 @@ import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
-import com.google.android.material.snackbar.Snackbar
+import com.mobileapp.deafassist.DeafAssistViewModel
 import com.mobileapp.deafassist.data.FavoriteEntity
 import com.mobileapp.deafassist.data.FavoritesApplication
 import com.mobileapp.deafassist.databinding.FragmentItemListDialogListDialogBinding
@@ -33,13 +35,16 @@ const val ARG_ITEM_COUNT = "item_count"
 class FavoriteListDialogFragment : BottomSheetDialogFragment() {
 
     private var _binding: FragmentItemListDialogListDialogBinding? = null
+
     // This property is only valid between onCreateView and onDestroyView.
     private val binding get() = _binding!!
 
     // ViewModel object
-    val favoriteViewModel: FavoriteViewModel by  activityViewModels {
+    val favoriteViewModel: FavoriteViewModel by activityViewModels {
         FavoriteViewModelFactory((activity?.application as FavoritesApplication).repository)
     }
+    val mainViewModel: DeafAssistViewModel by activityViewModels()
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -75,6 +80,7 @@ class FavoriteListDialogFragment : BottomSheetDialogFragment() {
         RecyclerView.ViewHolder(binding.root) {
 
         internal val text: TextView = binding.text
+        internal val editButton: Button = binding.button
     }
 
     // Adapter Class for RecyclerView
@@ -92,12 +98,17 @@ class FavoriteListDialogFragment : BottomSheetDialogFragment() {
         // binds the list items to a view
         override fun onBindViewHolder(holder: ViewHolder, position: Int) {
             holder.text.text = favoriteViewModel.allFavorites.value!![position].text
+            holder.text.setOnClickListener {
+                mainViewModel.update(holder.text.text as String)
+                dismiss()
+            }
         }
 
         override fun getItemCount(): Int {
             return if (favoriteViewModel.allFavorites.value == null) 0 else
                 favoriteViewModel.allFavorites.value!!.size
-        }    }
+        }
+    }
 
     override fun onDestroyView() {
         super.onDestroyView()
