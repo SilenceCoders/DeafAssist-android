@@ -12,4 +12,5 @@
     <color name="purple_background">#F2E0FC</color>
 
     <color name="red">#FF0000</color>
+    <color name="hint_text_color">#757575</color>
 </resources>

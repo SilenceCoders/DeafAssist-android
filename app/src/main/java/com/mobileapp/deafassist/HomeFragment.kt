@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.widget.TextViewCompat
 import androidx.core.widget.doOnTextChanged
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
@@ -21,6 +22,7 @@ class HomeFragment : Fragment() {
     ): View {
         // Inflate the layout for this fragment
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
+        TextViewCompat.setAutoSizeTextTypeWithDefaults(binding.textView, TextViewCompat.AUTO_SIZE_TEXT_TYPE_UNIFORM)
 
         val model: DeafAssistViewModel by activityViewModels()
 
