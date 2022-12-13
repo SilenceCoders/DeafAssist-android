@@ -2,9 +2,9 @@
 <shape xmlns:android="http://schemas.android.com/apk/res/android" >
     <stroke
         android:width="2dp"
-        android:color="@color/purple_700" />
+        android:color="@color/purple_500" />
 
-    <solid android:color="@color/purple_200" />
+    <solid android:color="@color/floating_btn_color" />
 
     <padding
         android:left="1dp"
